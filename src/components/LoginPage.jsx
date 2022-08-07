@@ -15,7 +15,7 @@ export default function LoginPage() {
     const password = passwordRef.current.value;
 
     auth.signIn(email, password).then(() => {
-      router.push('/dashboard/products');
+      router.push('/dashboard');
     })
     .catch(function (error) {
       if(error.response?.status === 401){
